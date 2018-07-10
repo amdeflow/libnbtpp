@@ -10,6 +10,8 @@ build:
     - cd build
     - cmake .. -DLIBNBTPP_BUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Release
     - make
+    - strip libnbtpp.so
+    - strip nbtpptest
   artifacts:
     paths:
       - build/libnbtpp.so
