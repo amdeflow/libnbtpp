@@ -22,9 +22,7 @@ build:
 test:
   stage: test
   script:
-    - ls
     - cd build
-    - ls
     - chmod +x nbtpptest
     - ./nbtpptest
   dependencies:
