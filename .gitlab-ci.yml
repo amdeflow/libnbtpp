@@ -13,6 +13,7 @@ build:
   artifacts:
     paths:
       - build/libnbtpp.so
+      - build/nbtpptest
       - binary.hpp
       - endianness.hpp
       - nbtfile.hpp
@@ -21,6 +22,10 @@ build:
 test:
   stage: test
   script:
-    - ./build/nbtpptest
+    - ls
+    - cd build
+    - ls
+    - chmod +x nbtpptest
+    - ./nbtpptest
   dependencies:
     - build
