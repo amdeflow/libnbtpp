@@ -5,6 +5,7 @@ A C++17 NBT Library with compression support
 
 ### Requirements
 * Boost.IOStreams (required for compression support, there is no option to disable this feature)
+* CMake
 * A compiler (this library has only been tested on Clang and GCC on Arch Linux)
 
 ### Building
