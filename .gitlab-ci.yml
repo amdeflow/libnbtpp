@@ -1,4 +1,4 @@
-image: rikorose/gcc-cmake:8
+image: rikorose/gcc-cmake
 
 before_script:
   - apt-get update -qq && install libboost-all-dev
