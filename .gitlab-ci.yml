@@ -10,7 +10,7 @@ build:
     - cd build
     - cmake .. -DLIBNBTPP_BUILD_TESTS=ON
     - make
-  arftifacts:
+  artifacts:
     - build/libnbtpp.so
 
 test:
