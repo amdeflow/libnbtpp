@@ -3,7 +3,7 @@
 #include "nbtpp.hpp"
 #include "binary.hpp"
 
-bool checkContainer() {
+bool container() {
     try {
         NBT::Tag test(NBT::TagCompound_t {
                 { "Eggbert", NBT::Tag("bananrama") },
@@ -18,7 +18,7 @@ bool checkContainer() {
     return false;
 }
 
-bool checkBasicWrite() {
+bool basicw() {
     try {
         NBT::Tag test(NBT::TagCompound_t {
                 { "Test", NBT::Tag("apple") },
@@ -70,11 +70,11 @@ bool bread() {
 }
 
 TEST_CASE( "Basic Compound", "[container]" ) {
-    REQUIRE(checkContainer() );
+    REQUIRE( container() );
 }
 
-TEST_CASE( "Basic Write", "[write]" ) {
-    REQUIRE( checkBasicWrite() );
+TEST_CASE( "Basic Write", "[basicw]" ) {
+    REQUIRE( basicw() );
 }
 
 TEST_CASE( "Floating point read", "[fpread]" ) {
