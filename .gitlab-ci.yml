@@ -11,7 +11,8 @@ build:
     - cmake .. -DLIBNBTPP_BUILD_TESTS=ON
     - make
   artifacts:
-    - build/libnbtpp.so
+    paths:
+      - build/libnbtpp.so
 
 test:
   stage: test
