@@ -1,7 +1,7 @@
 image: rikorose/gcc-cmake
 
 before_script:
-  - apt-get update -qq && apt-get install libboost-all-dev
+  - apt-get update -qq && apt-get install libboost-iostreams-dev -y
 
 build:
   stage: build
