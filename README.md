@@ -23,4 +23,4 @@ make install
 ```
 
 #### Testing
-To build the testing executable pass the flag `-DLIBNBTPP_BUILD_TESTS=ON` to the `cmake` command in the [build](#building) process. To run the tests, execute `./nbtpptest`
+To build the testing executable pass the flag `-DLIBNBTPP_BUILD_TESTS=ON` to the `cmake` command in the [build](#building) process. To run the tests, execute `./nbtpptest` in the build directory
