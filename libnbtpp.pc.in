@@ -1,11 +1,11 @@
 prefix=@DEST_DIR@
-exec_prefis=${prefix}
+exec_prefix=${prefix}
 libdir=${prefix}/lib
-include_dir=${prefix}/include
+includedir=${prefix}/include/nbtpp
 
 Name: libnbtpp
 Description: nbtpp: a library for creating and editing NBT (Named Binary Tag) files
 Version: 1.0
 
 Libs: -L${libdir} @PRIVATE_LIBS@
-Cflags -I${includedir}
+Cflags: -I${includedir}

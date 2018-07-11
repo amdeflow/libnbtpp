@@ -16,13 +16,11 @@ target_include_directories(nbtpp PRIVATE ${Boost_INCLUDE_DIRS})
 install(TARGETS nbtpp DESTINATION lib)
 install(FILES binary.hpp endianness.hpp nbtfile.hpp nbtpp.hpp DESTINATION include/nbtpp)
 
-set(DEST_DIR "${CMACMAKE_INSTALL_PREFIX}")
-foreach(LIB ${COMMA_SEPERATED_LIST})
-    set(PRIVATE_LIBS "${RPIVATE_LIBS} -l${LIB}")
-endforeach()
+set(DEST_DIR "${CMAKE_INSTALL_PREFIX}")
+set(PRIVATE_LIBS "-llibnbtpp")
 
 configure_file("libnbtpp.pc.in" "libnbtpp.pc" @ONLY)
-instalL(FILES libnbtpp.pc.in DESTINATION share/pkgconfig)
+install(FILES ${CMAKE_BINARY_DIR}/libnbtpp.pc DESTINATION share/pkgconfig)
 
 if (LIBNBTPP_BUILD_TESTS)
     add_executable(nbtpptest catch.hpp tests.cpp)
