@@ -1,13 +1,13 @@
 build:
   stage: build
-  image: rikorose/gcc-cmake
+  image: base/devel
   before_script:
-    - apt-get update -qq && apt-get install libboost-iostreams-dev zlib1g-dev -y
+    - pacman -Sy cmake boost zlib ninja
   script:
     - mkdir build
     - cd build
     - cmake .. -DLIBNBTPP_BUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Release
-    - make
+    - ninja
     - strip libnbtpp.so
     - strip nbtpptest
   artifacts:
@@ -20,7 +20,7 @@ build:
       - nbtpp.hpp
 
 test:
-  image: busybox
+  image: base/devel
   stage: test
   script:
     - cd build
