@@ -20,7 +20,7 @@ build:
       - nbtpp.hpp
 
 test:
-  image: base
+  image: base/archlinux
   stage: test
   script:
     - cd build
