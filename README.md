@@ -27,3 +27,21 @@ make install
 
 #### Testing
 To build the testing executable pass the flag `-DLIBNBTPP_BUILD_TESTS=ON` to the `cmake` command in the [build](#building) process. To run the tests, execute `./nbtpptest` in the build directory
+
+### Example
+```c++
+#include <nbtpp/nbtfile.hpp>
+
+int main(int argc, char * argv[]) {
+    NBT::File file("bigtest.nbt");
+    auto eggCompound = file.getRoot().at("nested compound test").tagCompound()
+                                     .at("egg").tagCompound();
+    
+    std::cout << eggCompound.at("name").tagString()
+              << ": "
+              << eggCompound.at("value").tagFloat()
+              << std::endl;
+              
+    return EXIT_SUCCESS;
+}
+```
