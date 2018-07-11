@@ -20,7 +20,7 @@ build:
       - nbtpp.hpp
 
 test:
-  image: base/devel
+  image: base
   stage: test
   script:
     - cd build
