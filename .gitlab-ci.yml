@@ -20,6 +20,9 @@ build:
       - nbtpp.hpp
 
 test:
+  image: scratch
+  before_script:
+    - apt-get update -qq && apt-get install libboost-iostreams-dev -y
   stage: test
   script:
     - cd build
