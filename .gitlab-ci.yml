@@ -20,7 +20,7 @@ build:
       - nbtpp.hpp
 
 test:
-  image: scratch
+  image: busybox
   stage: test
   script:
     - cd build
