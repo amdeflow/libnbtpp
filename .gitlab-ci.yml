@@ -2,7 +2,7 @@ build:
   stage: build
   image: base/devel
   before_script:
-    - pacman -Sy cmake boost zlib ninja
+    - pacman -Sy cmake boost zlib ninja --noconfirm
   script:
     - mkdir build
     - cd build
