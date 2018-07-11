@@ -3,6 +3,8 @@ libnbtpp
 
 A C++17 NBT Library with compression support
 
+NOTE: The 'real' repository can be found at [GitLab](https://gitlab.com/amdeflow/libnbtpp). Please report issues and merge requests there.
+
 ### Requirements
 * Boost.Iostreams (required for compression support, there is no option to disable this feature)
 * CMake
