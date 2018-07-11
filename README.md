@@ -8,7 +8,7 @@ NOTE: The 'real' repository can be found at [GitLab](https://gitlab.com/amdeflow
 ### Requirements
 * Boost.Iostreams (required for compression support, there is no option to disable this feature)
 * CMake
-* A compiler (this library has only been tested on Clang and GCC on Arch Linux)
+* A compiler with C++17 support (this library has only been tested on Clang and GCC on Arch Linux)
 
 ### Building
 #### Compilation
